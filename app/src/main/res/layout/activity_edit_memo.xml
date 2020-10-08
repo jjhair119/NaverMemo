@@ -12,6 +12,8 @@
         android:layout_height="match_parent"
         android:background="@android:color/white">
 
+<!--        안 의... 웨 생일인데... 이러고...있...-->
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout"
             android:layout_width="match_parent"
