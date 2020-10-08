@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="memo"
+            type="com.note11.edcanserver.MemoModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/round"
+        android:padding="24dp">
+
+
+        <TextView
+            android:fontFamily="@font/nanumsquareb"
+            android:id="@+id/txt_memo_row_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{memo.text, default = `test memo`}"
+            android:textColor="@android:color/black"
+            android:textSize="19sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:fontFamily="@font/nanumsquarer"
+            android:id="@+id/txt_memo_row_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="@{memo.time, default = `08.12 11:11`}"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@+id/txt_memo_row_text"
+            app:layout_constraintTop_toBottomOf="@+id/txt_memo_row_text" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
